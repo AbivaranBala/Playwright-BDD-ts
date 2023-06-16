@@ -69,18 +69,3 @@ In [package.json](package.json) file, modify the `cucumber` script to keep only 
   });
   ```
 
-## To use a custom option on the CLI
-
-With cucumber-js v7, you cannot have anymore custom options on the CLI.
-This is a breaking change with cucumber-js v6.
-
-You must instead use environment variables.
-
-When running your tests localy, you can setup environment variables by customizing the file [set-environment-variables.ts](env/set-environment-variables.ts).
-
-When running on a CI, you should setup your jobs with the expected environment variables.
-
-## To use a custom World Objet
-
-- cutomize the given Custom World Object : [custom-world](world/custom-world.ts)
-

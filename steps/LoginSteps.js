@@ -3,7 +3,7 @@ const { LoginPage } = require('../page/LoginPage')
 
 let loginPage = new LoginPage()
 
-When('I Visit the OrangeHRM login page', async () => {
+When('I Visit the Demourl login page', async () => {
     await loginPage.navigate()
 })
 

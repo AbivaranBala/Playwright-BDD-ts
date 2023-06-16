@@ -14,20 +14,20 @@ class LoginPage {
     }
 
     async enterUsername() {
-        await global.page.locator('//input[@placeholder="Username"]').waitFor({ status: 'visible', setTimeout: 20000 })
-        await global.page.locator('//input[@placeholder="Username"]').fill(process.env.WEB_USERNAME)
+        await global.page.locator('(//span[text()="Email Address / Login Id: "]/following::input)[1]').waitFor({ status: 'visible', setTimeout: 20000 })
+        await global.page.locator('(//span[text()="Email Address / Login Id: "]/following::input)[1]').fill(process.env.WEB_USERNAME)
     }
 
     async enterPassword() {
-        await global.page.locator('//input[@placeholder="Password"]').fill(process.env.WEB_PASSWORD)
+        await global.page.locator('(//input[@type="password"])[2]').fill(process.env.WEB_PASSWORD)
     }
 
     async clickOnLoginButton() {
-        await global.page.locator('//button[@type="submit"]').click()
+        await global.page.locator('(//input[@value="Login"])[2]').click()
     }
 
     async verifyDashboardURL() {
-        expect(await global.page.url()).toEqual('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
+        expect(await global.page.url()).toEqual('https://www.testyou.in/Login.aspx')
     }
 }
 

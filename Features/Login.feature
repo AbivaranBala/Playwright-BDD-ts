@@ -1,8 +1,8 @@
 Feature: Login Feature
  
 @login
-Scenario: Login to OrangeHRM
- When I Visit the OrangeHRM login page
+Scenario: Login to Demourl
+ When I Visit the Demourl login page
  And I enter username
  And I enter Password
  And I click on Login button

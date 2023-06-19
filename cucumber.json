@@ -6,8 +6,10 @@
             "Utility/*.js"
         ]
     },
-    "format": [
-        "progress-bar",
-        "html:cucumber-report-html"
-    ]
+     "format":[
+        "html:test-results/cucumber-report.html",
+        "json:test-results/cucumber-report.json"
+        ],
+    "publishQuiet": false
+
 }
